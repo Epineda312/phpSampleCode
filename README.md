@@ -1,3 +1,6 @@
 # phpSampleCode
 "Cheat Sheet"
--Going to add to this soon!
+-Working examples and explainations of basic code that is useful to have all in one place!
+
+
+ 
