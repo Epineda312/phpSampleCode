@@ -126,8 +126,33 @@ do {
 <!--Note that in a do while loop, the condition is tested AFTER executing the statements within the loop. This means that the do while loop would execute its statements at least once, even if the condition is false the first time. -->
 
 <!-- 
+                The for Loop
 
--->
+The for loop is used when you know in advance how many times the script should run.
+ for (init; test; increment) {
+   code to be executed;
+}
+
+Parameters:
+init: Initialize the loop counter value
+test: Evaluates each time the loop is iterated, continuing if evaluates to true, and ending if it evaluates to false
+increment: Increases the loop counter value
+
+Each of the parameter expressions can be empty or contain multiple expressions that are separated with commas.
+In the for statement, the parameters are separated with semicolons.
+
+The example below displays the numbers from 0 to 5:
+Value of a : 0
+Value of a : 1
+Value of a : 2
+Value of a : 3
+Value of a : 4
+Value of a : 5  -->
+<?php
+for ($a = 0; $a < 6; $a++) {
+   echo "Value of a : ". $a . "<br />";
+}
+?>
 
 <!-- 
 
