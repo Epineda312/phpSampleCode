@@ -153,6 +153,119 @@ for ($a = 0; $a < 6; $a++) {
    echo "Value of a : ". $a . "<br />";
 }
 ?>
+<!-- 
+                    The foreach Loop
+
+The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.
+
+There are two syntaxes: foreach (array as $value) {
+  code to be executed;
+}
+//or
+foreach (array as $key => $value) {
+   code to be executed;
+}
+The first form loops over the array. 
+On each iteration, the value of the current element is assigned to $value, and the array pointer is moved by one, until it reaches the last array element.
+The second form will additionally assign the current element's key to the $key variable on each iteration.
+
+The following example demonstrates a loop that outputs the values of the $names array. -->
+<?php
+$names = array("John", "David", "Amy");
+foreach ($names as $name) {
+   echo $name.'<br />';
+}
+?>
+<!--
+// John
+// David
+// Amy
+-->
+
+<!-- The switch Statement
+
+The switch statement is an alternative to the if-elseif-else statement.
+Use the switch statement to select one of a number of blocks of code to be executed.
+-->
+<?php
+Syntax: switch (n) {
+  case value1:
+    //code to be executed if n=value1
+    break;
+  case value2:
+     //code to be executed if n=value2
+     break;
+  ...
+  default:
+    // code to be executed if n is different from all labels
+}
+?>
+<!--First, our single expression, n (most often a variable), is evaluated once.
+Next, the value of the expression is compared with the value of each case in the structure. 
+If there is a match, the block of code associated with that case is executed.
+Using nested if else statements results in similar behavior, but switch offers a more elegant and optimal solution.
+Switch
+
+Consider the following example, which displays the appropriate message for each day. -->
+<?php
+$today = 'Tue';
+
+switch ($today) {
+  case "Mon":
+    echo "Today is Monday.";
+    break;
+  case "Tue":
+    echo "Today is Tuesday.";
+    break;
+  case "Wed":
+    echo "Today is Wednesday.";
+    break;
+  case "Thu":
+    echo "Today is Thursday.";
+    break;
+  case "Fri":
+     echo "Today is Friday.";
+     break;
+  case "Sat":
+     echo "Today is Saturday.";
+     break;
+  case "Sun":
+     echo "Today is Sunday.";
+     break;
+  default:
+     echo "Invalid day.";
+}
+?>
+<!--
+//Outputs "Today is Tuesday."
+Try It Yourself
+
+The break keyword that follows each case is used to keep the code from automatically running into the next case. 
+If you forget the break; statement, PHP will automatically continue through the next case statements, even when the case doesn't match.
+
+            default
+
+The default statement is used if no match is found.
+-->
+<?php
+$x=5;
+switch ($x) {
+  case 1:
+    echo "One";
+    break;
+  case 2:
+    echo "Two";
+    break;
+  default:
+    echo "No match";
+}
+?>
+<!--
+//Outputs "No match"
+Try It Yourself
+
+The default statement is optional, so it can be omitted.
+-->
 
 <!-- 
 
